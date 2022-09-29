@@ -1,5 +1,5 @@
 export function displayHomePage(req, res, next) {
-    res.render('index', { title: 'Home', page: 'home', myName: 'Thiago'} );
+    res.render('index', { title: 'Home', page: 'home', myName: 'Tim'} );
 };
 
 export function displayAboutPage(req, res, next) {
@@ -22,6 +22,6 @@ export function displayLoginPage(req, res, next) {
     res.render('index', { title: 'Login', page: 'login'} );
 };
 
-export function displayBusListPage(req, res, next) {
-    res.render('index', { title: 'BusList', page: 'buslist'} );
+export function displayListPage(req, res, next) {
+    res.render('index', { title: 'List', page: 'list'} );
 };
