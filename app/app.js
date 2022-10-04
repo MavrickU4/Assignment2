@@ -38,7 +38,49 @@ app.use(session({
 
 // Use Routes
 app.use('/', indexRouter);
+//App routers
+//app.use('/', authRouter)
+//app.use('/', listRouter)
 
+/*
+// PASSPORT
+//Step 1 
+import passport from 'passport';
+//prompt npm install passport 
+import passportLocal from 'passport-ls';
+//promp npm install passport-local
+import flash from 'connect-flash';
+//promt  npm install connect-flash
 
+//AUTH Step 2 - define our auth strategy
+let localStrategy = passportLocal.Strategy;
+
+//Auth Step 3 - import the user model
+import User from './modules/user.js';
+
+//Step 4 - 
+import authRouter from './routres/auth.route.server.js';
+
+//Auth Step 4 - setup Express Session
+//app.use(session({
+   // secret: Secret,
+   //// saveUninitialized: false, 
+    //resave: false
+//}));
+//Auth 5
+app.use(flash());
+
+//Auth Step 6 - Initialize PAssport and session
+app.use(passport.initialize());
+app.use(passport.session());
+
+//Auth Step 7 - impliment the Auth Stragety
+passport.use(User.createStrategy());
+
+//Auth Step 8 - setup serializtion and deserialization
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+*/
 export default app;
+
 

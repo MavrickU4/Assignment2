@@ -46,3 +46,9 @@ function formSubmit() {
 		alert("Thank you, your message has been recieved! We will get back to you ASAP.");
 	}
 }
+
+export function UserDisplayName(req){
+	if(rq.usere){
+		return req.user.UserDisplayName
+	}return '';
+}
