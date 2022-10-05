@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const Schema = mongoose.Schema;
 
-const ContactsSchema = new Schema({
+const ContactSchema = new Schema({
     name: String, 
     year: String, 
     director: String,
@@ -10,7 +10,7 @@ const ContactsSchema = new Schema({
     runtime: Number
 }, {
     timestamps: true,
-    collection: 'movies'
+    collection: 'contacts'
 });
 
 export default mongoose.model('Contacts', ContactSchema);

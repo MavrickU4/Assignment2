@@ -16,6 +16,6 @@ router.get('/projects', displayProjectsPage);
 router.get('/services', displayServicesPage);
 router.get('/contact', displayContactPage);
 router.get('/login', displayLoginPage);
-router.get('/list', displayListPage);
+router.get('/contact-list', displayListPage);
 
 export default router;
