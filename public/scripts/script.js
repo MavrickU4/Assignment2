@@ -47,8 +47,3 @@ function formSubmit() {
 	}
 }
 
-export function UserDisplayName(req){
-	if(rq.usere){
-		return req.user.UserDisplayName
-	}return '';
-}

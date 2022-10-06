@@ -3,6 +3,7 @@ import contactModel from '../../models/contacts.js';
 import { UserDisplayName } from '../utils/index.js';
 
 export function DisplayContactsList(req, res, next){
+
     contactModel.find(function(err, contactsCollection) {
         if(err){
             console.error(err);

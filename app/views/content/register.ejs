@@ -1,18 +1,16 @@
-<div class="container">
-    <div class="row">
-      <div class="offset-md-3 col-md-6 col-sm-12">
-            <div class="login" id="contentArea">
+<div class="largecontainer" >
+   
+      <div class="" class="override">
                 <h1 class="display-4">Register</h1>
-  
               <!-- Message Area -->
               <% if(messages.length > 0) { %>
                 <div id="messageArea" class="alert alert-danger">
-                  <%= messages %>
+                  <%= messages%>
                 </div>
                 <% } %>
   
                 <form method="POST" id="registerForm" novalidate>
-                  <p class="hint-text">Create your own account. It's free and only takes a minute.</p>
+                  <p class="hint-text">Create your own account. It's free!</p>
   
                   <div class="form-group">
                     <div class="row">
@@ -63,20 +61,20 @@
                     </div>
                   </div>
                                                       
-                  <div class="text-end mt-2">
+                  <div class="text-end">
                     <button id="submitButton" type="submit" class="btn btn-primary btn-lg">
                       <i class="fas fa-user-plus"></i> Register</button>
                     <button id="cancelButton" type="reset" class="btn btn-warning btn-lg">
                       <i class="fas fa-undo"></i> Cancel</button>
                   </div>
                 </form>
-              
-            </div>
-            <p class="text-center text-muted small">
-              Already have an account? 
-              <a class="link" href="/login">Sign in</a>
+                
+              </div>
+             
               
             </p>
-      </div>
-    </div>
+   
   </div>
+  <p class="text-center text-muted small">
+                  Already have an account? 
+                  <a class="link" href="/login">Sign in</a>
