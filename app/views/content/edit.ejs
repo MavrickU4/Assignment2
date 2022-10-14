@@ -16,9 +16,9 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="authorTextField">Email</label>
+                    <label for="emailTextField">Email</label>
                     <input type="text" class="form-control"
-                    id="authorTextField"
+                    id="emailTextField"
                     placeholder="Enter their e-mail address"
                     name="email" 
                     value="<%= contact.email %>"
@@ -26,9 +26,9 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="publishedTextField">Phone</label>
+                    <label for="phoneTextField">Phone</label>
                     <input type="text" class="form-control"
-                    id="publishedTextField"
+                    id="phoneTextField"
                     placeholder="Enter their phone number"
                     name="phone" 
                     value="<%= contact.phone %>"
@@ -36,25 +36,24 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="descriptionTextArea">Profession</label>
+                    <label for="professionTextArea">Profession</label>
                     <input type="text" class="form-control"
-                    id="descriptionTextArea"
+                    id="professionTextArea"
                     placeholder="Enter their profession"
                     name="profession"                     
                     value="<%= contact.profession %>"
-                    required
-                    >
+                    required>
                     </input>
                 </div>
 
                 <div class="form-group">
-                    <label for="priceTextField">LinkedIn</label>
+                    <label for="linkedinTextField">LinkedIn</label>
                     <input type="text" class="form-control"
-                    id="priceTextField"
+                    id="linkedinTextField"
                     placeholder="Enter their LinkedIn link"
                     name="linkedin" 
                     value="<%= contact.linkedin %>"
-                    required>
+                    not required>
                 </div>
 
                 <button class="btn btn-primary" type="submit">

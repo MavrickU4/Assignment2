@@ -6,6 +6,8 @@ const ContactsSchema = new Schema({
     name: String, 
     email: String, 
     phone: String,
+    profession: String,
+    linkedin: String
 }, {
     timestamps: true,
     collection: 'contacts'

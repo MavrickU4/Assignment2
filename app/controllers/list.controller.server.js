@@ -21,8 +21,8 @@ export function ProcessContactsAddPage(req, res, next){
     
     let newContact = contactsModel({
         name: req.body.name,
-        email: req.body.year,
-        phone: req.body.director,
+        email: req.body.email,
+        phone: req.body.phone,
         profession: req.body.profession,
         linkedin: req.body.linkedin
     });
