@@ -23,7 +23,3 @@ export function displayContactPage(req, res, next) {
 export function displayLoginPage(req, res, next) {
     res.render('index', { title: 'Login', page: 'login', displayName: UserDisplayName(req) } );
 };
-
-export function displayListPage(req, res, next) {
-    res.render('index', { title: 'List', page: 'contact-list', displayName: UserDisplayName(req) } );
-};

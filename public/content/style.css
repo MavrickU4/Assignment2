@@ -131,23 +131,25 @@ margin-top:9px;
 .contlogin{
 	margin-left:0px;
 	margin-bottom:20px;
+	margin-top:20px;
 	font-size: auto;
 	text-align: center;
 	display:inline-block;
 	vertical-align: middle;
-	width: 87%;
+	width: 67%;
 	height:82%;
 	border:solid;
 	border-radius: 10px;
-	overflow: auto;
-	min-width: 610px;
+	min-width: 410px;
+	padding: 10px;
 }
 .login{
 	height: 100%;
-	min-width: 300px;
+	min-width: 200px;
+	margin-left:30%;
 	border:solid;
-	border-radius: 20px;
-	margin-right:10px;
+	border-radius: 10px;
+	float:left;
 }
 .text-end{
 	margin-top: 5px;

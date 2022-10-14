@@ -1,16 +1,15 @@
-import contactModel from '../../models/contacts.js';
-
+import contactsModel from '../../models/contacts.js';
 import { UserDisplayName } from '../utils/index.js';
 
 export function DisplayContactsList(req, res, next){
 
-    contactModel.find(function(err, contactsCollection) {
+    contactsModel.find(function(err, contactsCollection) {
         if(err){
             console.error(err);
             res.end(err);
         }
 
-        res.render('index', {title: 'Contact List', page: 'contact-list', contactss: contactsCollection, displayName: UserDisplayName(req)});
+        res.render('index', {title: 'Contact List', page: 'contact-list', contacts: contactsCollection, displayName: UserDisplayName(req)});
     })
 }
 
@@ -20,15 +19,15 @@ export function DisplayContactsAddPage(req, res, next){
 
 export function ProcessContactsAddPage(req, res, next){
     
-    let newContact = contactModel({
+    let newContact = contactsModel({
         name: req.body.name,
-        year: req.body.year,
-        director: req.body.director,
-        genre: req.body.genre,
-        runtime: req.body.runtime
+        email: req.body.year,
+        phone: req.body.director,
+        profession: req.body.profession,
+        linkedin: req.body.linkedin
     });
 
-    contactModel.create(newContact, (err, Contact) => {
+    contactsModel.create(newContact, (err, Contact) => {
         if(err){
             console.error(err);
             res.end(err);
@@ -41,7 +40,7 @@ export function ProcessContactsAddPage(req, res, next){
 export function DisplayContactsEditPage(req, res, next){
     let id = req.params.id;
 
-    contactModel.findById(id, (err, contact) => {
+    contactsModel.findById(id, (err, contact) => {
         if(err){
             console.error(err);
             res.end(err);
@@ -55,16 +54,16 @@ export function ProcessContactsEditPage(req, res, next){
 
     let id = req.params.id;
     
-    let newContact = contactModel({
+    let newContact = contactsModel({
         _id: req.body.id,
         name: req.body.name,
-        year: req.body.year,
-        director: req.body.director,
-        genre: req.body.genre,
-        runtime: req.body.runtime
+        email: req.body.email,
+        phone: req.body.phone,
+        profession: req.body.profession,
+        linkedin: req.body.linkedin
     });
 
-    contactModel.updateOne({_id: id }, newContact, (err, Contact) => {
+    contactsModel.updateOne({_id: id }, newContact, (err, Contact) => {
         if(err){
             console.error(err);
             res.end(err);
@@ -77,7 +76,7 @@ export function ProcessContactsEditPage(req, res, next){
 export function ProcessContactsDelete(req, res, next){
     let id = req.params.id;
 
-    contactModel.remove({_id: id}, (err) => {
+    contactsModel.remove({_id: id}, (err) => {
         if (err){
             console.error(err);
             res.end(err);

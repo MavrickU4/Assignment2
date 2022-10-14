@@ -4,8 +4,7 @@ import { displayAboutPage,
     displayHomePage, 
     displayProjectsPage, 
     displayServicesPage,
-    displayLoginPage,
-    displayListPage } from "../controllers/index.controller.server.js";
+    displayLoginPage } from "../controllers/index.controller.server.js";
 
 const router = Router();
 
@@ -16,6 +15,5 @@ router.get('/projects', displayProjectsPage);
 router.get('/services', displayServicesPage);
 router.get('/contact', displayContactPage);
 router.get('/login', displayLoginPage);
-router.get('/contact-list', displayListPage);
 
 export default router;

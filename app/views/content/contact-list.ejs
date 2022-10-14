@@ -21,39 +21,44 @@
                         <tr>
                             <th scope="col" class="text-center">#</th>
                             <th scope="col">Name</th>
-                            <th scope="col">Address</th>
-                            <th scope="col">Phone</th>
                             <th scope="col">Email</th>
-                            <th scope="col">Status</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Profession</th>
+                            <th scope="col">LinkedIn</th>
                             <th></th>
                             <th></th>
                         </tr>
                     </thead>
                     
-                    <tbody>
-
-                           <tr>
-                               <th scope="row" class="text-center"><</th>
-                               <td></td>
-                               <td></td>
-                               <td></td>
-                               <td></td>
-                               <td></td>
-                               
-                               <td class="text-center col-1">
-                                   <a href=""
-                                       class="btn btn-primary btn-sm">
-                                       <i class="fas fa-pencil-alt"></i> Edit</a>
-                               </td>
-                               
-                               <td class="text-center col-1">
-                                   <a href=""
-                                       class="btn btn-danger btn-sm">
-                                       <i class="fas fa-trash-alt"></i> Delete</a>
-                               </td>
-                           </tr>
-
-                   </tbody>
+                    <tbody id="contactsList">
+                        <!-- Repeatable Rows -->
+                        <% for(let count = 0; count < contacts.length; count++) { %>
+                            <tr>
+                                <th scope="row" class="text-center"><%= count + 1 %></th>
+                                <td><%= contacts[count].name %></td>
+                                <td><%= contacts[count].email %></td>
+                                <td><%= contacts[count].phone %></td>
+                                <td><%= contacts[count].profession %></td>
+                                <td><%= contacts[count].linkedin %></td>
+    
+                                <% if(displayName) { %>
+                                
+                                <td class="text-center col-1">
+                                    <a href="/contact-edit/<%= contacts[count]._id %>"
+                                        class="btn btn-primary btn-sm">
+                                        <i class="fas fa-pencil-alt"></i> Edit</a>
+                                </td>
+                                
+                                <td class="text-center col-1">
+                                    <a href="/contact-delete/<%= contacts[count]._id %>"
+                                        class="btn btn-danger btn-sm">
+                                        <i class="fas fa-trash-alt"></i> Delete</a>
+                                </td>
+    
+                                <% } %> 
+                            </tr>
+                        <% } %>
+                    </tbody>
 
 
                 </table> 
