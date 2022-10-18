@@ -43,8 +43,6 @@ const db = mongoose.connection;
 db.on('open', () => console.log("Connected to MongoDB"));
 db.on('error', () => console.log("Mongo Connection Error"));
 
-// Set Up Middlewares
-
 // Setup ViewEngine EJS
 app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'ejs');
@@ -55,7 +53,6 @@ app.use(express.urlencoded({ extended: false}));
 app.use(cookieParser());
 // app.use(express.static(path.join(__dirname,'/client')));
 app.use(express.static(path.join(__dirname,'../public')));
-
 
 // Auth Step 4 - Setup Express Session
 app.use(session({

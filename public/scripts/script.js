@@ -5,8 +5,8 @@
  * Date: 27 Sep 2022
  */
 
-document.getElementById("aboutImg").src = "./content/images/Tim.jpg";;
-
+//document.getElementById("aboutImg").src = "./content/images/Tim.jpg";
+document.getElementById("logo").src = "./../content/images/logo.png";
 //Display/Hide Projects Page Images/Descriptions
 function cover(x){	
 	document.getElementById("ImgProject").src = "./content/images/cover1.png";

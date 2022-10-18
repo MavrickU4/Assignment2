@@ -14,7 +14,7 @@ export function DisplayContactsList(req, res, next){
 }
 
 export function DisplayContactsAddPage(req, res, next){
-    res.render('index', { title: 'Add Contact', page: 'edit', contact: {}, displayName: UserDisplayName(req) });
+    res.render('index', { title: 'Add Contact', page: 'add', contact: {}, displayName: UserDisplayName(req) });
 }
 
 export function ProcessContactsAddPage(req, res, next){
@@ -46,8 +46,8 @@ export function DisplayContactsEditPage(req, res, next){
             res.end(err);
         }
 
-        res.render('index', { title: 'Edit Contact', page: 'edit', contact: contact, displayName: UserDisplayName(req) });
-    });    
+        res.render('indexEdit', { title: 'Edit Contact', page: 'edit', contact: contact, displayName: UserDisplayName(req) });
+    })   
 }
 
 export function ProcessContactsEditPage(req, res, next){
