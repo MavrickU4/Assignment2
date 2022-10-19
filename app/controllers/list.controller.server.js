@@ -1,4 +1,4 @@
-import contactsModel from '../../models/contacts.js';
+import contactsModel from '../../Models/contacts.js';
 import { UserDisplayName } from '../utils/index.js';
 
 export function DisplayContactsList(req, res, next){
