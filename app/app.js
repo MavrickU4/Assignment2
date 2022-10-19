@@ -18,8 +18,7 @@ import flash from 'connect-flash';
 let localStrategy = passportLocal.Strategy;
 
 // Auth Step 3 - import the user model
-import User from '../models/user.js';
-
+import User from './../models/user.js';
 
 // Import Mongoose Module
 import mongoose from 'mongoose';
