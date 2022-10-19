@@ -4,7 +4,7 @@ import express from 'express';
 import passport from 'passport';
 
 // need to include the User Model for authentication
-import User from '../../models/user.js';
+import User from '../../Models/user.js';
 
 // import DisplayName Utility method
 import { UserDisplayName } from '../utils/index.js';
